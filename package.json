@@ -1,0 +1,25 @@
+{
+  "name": "advanced_auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "env": "^0.0.2",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.5",
+    "nodemailer": "^6.7.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "nodemon": "^2.0.15"
+  }
+}
