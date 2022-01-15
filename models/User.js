@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { reset } = require("nodemon");
+const crypto = require("crypto");
 require("dotenv").config({ path: "./config.env" });
 
 const UserSchema = new mongoose.Schema({
