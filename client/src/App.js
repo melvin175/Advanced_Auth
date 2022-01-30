@@ -14,6 +14,7 @@ export default function App() {
     <div className="App">
       <Switch>
         <PrivateRoute exact path="/" component={PrivateScreen} />
+        <PrivateRoute exact path="/home" component={Home} />
         <Route exact path="/login" component={LoginScreen} />
         <Route exact path="/register" component={RegisterScreen} />
         <Route exact path="/forgotpassword" component={ForgotPasswordScreen} />
@@ -22,7 +23,6 @@ export default function App() {
           path="/passwordreset/:resetToken"
           component={ResetPasswordScreen}
         />
-        <Route path="/" component={Home} />
       </Switch>
     </div>
   );
