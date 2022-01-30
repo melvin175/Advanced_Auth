@@ -13,9 +13,9 @@ exports.register = async (req, res, next) => {
       password,
     });
 
-    sendToken(user, 201, res);
-  } catch (error) {
-    next(error);
+    sendToken(user, 200, res);
+  } catch (err) {
+    next(err);
   }
 };
 
@@ -24,7 +24,7 @@ exports.login = async (req, res, next) => {
 
   if (!email || !password) {
     return next(
-      new ErrorResponse("Please provide an email nad password!"),
+      new ErrorResponse("Please provide an email and password!"),
       400
     );
   }
@@ -59,7 +59,7 @@ exports.forgotpassword = async (req, res, next) => {
 
     await user.save();
 
-    const resetUrl = `http:localhost:3000/passwordrest/${resetToken}`;
+    const resetUrl = `http:localhost:3000/passwordreset/${resetToken}`;
 
     const message = `
     <h1> Forgot your passcode?</h1>
